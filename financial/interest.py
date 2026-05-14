@@ -1,6 +1,5 @@
 # https://www.investopedia.com
 
-from __future__ import annotations
 
 
 def simple_interest(

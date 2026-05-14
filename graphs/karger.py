@@ -2,7 +2,6 @@
 An implementation of Karger's Algorithm for partitioning a graph.
 """
 
-from __future__ import annotations
 
 import random
 

@@ -13,7 +13,6 @@ For manual testing run:
 python3 exponential_search.py
 """
 
-from __future__ import annotations
 
 
 def binary_search_by_recursion(

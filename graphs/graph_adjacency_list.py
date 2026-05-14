@@ -16,16 +16,12 @@ Potential Future Ideas:
 - Support multigraph functionality if the client wants it
 """
 
-from __future__ import annotations
 
 import random
 import unittest
 from pprint import pformat
-from typing import TypeVar
 
 import pytest
-
-T = TypeVar("T")
 
 
 class GraphAdjacencyList[T]:

@@ -17,7 +17,6 @@ Overview about methods
 - decrypt_file : boolean
 """
 
-from __future__ import annotations
 
 
 class XORCipher:

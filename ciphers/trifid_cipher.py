@@ -6,7 +6,6 @@ these mixed trigrams into ciphertext letters.
 https://en.wikipedia.org/wiki/Trifid_cipher
 """
 
-from __future__ import annotations
 
 # fmt: off
 TEST_CHARACTER_TO_NUMBER = {

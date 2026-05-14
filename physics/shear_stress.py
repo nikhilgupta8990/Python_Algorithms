@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 """
 Shear stress is a component of stress that is coplanar to the material cross-section.

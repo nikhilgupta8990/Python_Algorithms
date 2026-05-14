@@ -7,22 +7,21 @@ using dynamic programming.
 """
 
 
-def mf_knapsack(i, wt, val, j):
+def mf_knapsack(i: int, wt: list, val: list, j: int, f: list) -> int:
     """
-    This code involves the concept of memory functions. Here we solve the subproblems
-    which are needed unlike the below example
-    F is a 2D array with ``-1`` s filled up
+    Top-down memoized knapsack. ``f`` is a 2D table pre-filled with -1.
+
+    Solve only the subproblems needed (unlike the bottom-up ``knapsack``).
     """
-    global f  # a global dp table for knapsack
     if f[i][j] < 0:
         if j < wt[i - 1]:
-            val = mf_knapsack(i - 1, wt, val, j)
+            result = mf_knapsack(i - 1, wt, val, j, f)
         else:
-            val = max(
-                mf_knapsack(i - 1, wt, val, j),
-                mf_knapsack(i - 1, wt, val, j - wt[i - 1]) + val[i - 1],
+            result = max(
+                mf_knapsack(i - 1, wt, val, j, f),
+                mf_knapsack(i - 1, wt, val, j - wt[i - 1], f) + val[i - 1],
             )
-        f[i][j] = val
+        f[i][j] = result
     return f[i][j]
 
 
@@ -142,7 +141,7 @@ if __name__ == "__main__":
     f = [[0] * (w + 1)] + [[0] + [-1] * (w + 1) for _ in range(n + 1)]
     optimal_solution, _ = knapsack(w, wt, val, n)
     print(optimal_solution)
-    print(mf_knapsack(n, wt, val, w))  # switched the n and w
+    print(mf_knapsack(n, wt, val, w, f))  # switched the n and w
 
     # testing the dynamic programming problem with example
     # the optimal subset for the above example are items 3 and 4

@@ -8,7 +8,6 @@ diagonal lines.
 
 """
 
-from __future__ import annotations
 
 solution = []
 

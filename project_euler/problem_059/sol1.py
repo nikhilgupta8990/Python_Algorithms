@@ -26,7 +26,6 @@ must contain common English words, decrypt the message and find the sum of the A
 values in the original text.
 """
 
-from __future__ import annotations
 
 import string
 from itertools import cycle, product

@@ -2,9 +2,7 @@
 
 """Author: OMKAR PATHAK"""
 
-from __future__ import annotations
-
-from queue import Queue
+from collections import deque
 
 
 class Graph:
@@ -13,7 +11,7 @@ class Graph:
 
     def print_graph(self) -> None:
         """
-        prints adjacency list representation of graaph
+        prints adjacency list representation of graph
         >>> g = Graph()
         >>> g.print_graph()
         >>> g.add_edge(0, 1)
@@ -50,24 +48,15 @@ class Graph:
         >>> sorted(g.bfs(2))
         [0, 1, 2, 3]
         """
-        # initialize set for storing already visited vertices
-        visited = set()
+        visited = {start_vertex}
+        queue = deque([start_vertex])
 
-        # create a first in first out queue to store all the vertices for BFS
-        queue: Queue = Queue()
-
-        # mark the source node as visited and enqueue it
-        visited.add(start_vertex)
-        queue.put(start_vertex)
-
-        while not queue.empty():
-            vertex = queue.get()
-
-            # loop through all adjacent vertex and enqueue it if not yet visited
+        while queue:
+            vertex = queue.popleft()
             for adjacent_vertex in self.vertices[vertex]:
                 if adjacent_vertex not in visited:
-                    queue.put(adjacent_vertex)
                     visited.add(adjacent_vertex)
+                    queue.append(adjacent_vertex)
         return visited
 
 

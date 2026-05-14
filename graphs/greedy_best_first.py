@@ -2,7 +2,6 @@
 https://en.wikipedia.org/wiki/Best-first_search#Greedy_BFS
 """
 
-from __future__ import annotations
 
 Path = list[tuple[int, int]]
 

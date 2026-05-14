@@ -3,12 +3,8 @@
 # Author: OMKAR PATHAK, Nwachukwu Chidiebere
 
 # Use a Python dictionary to construct the graph.
-from __future__ import annotations
 
 from pprint import pformat
-from typing import TypeVar
-
-T = TypeVar("T")
 
 
 class GraphAdjacencyList[T]:

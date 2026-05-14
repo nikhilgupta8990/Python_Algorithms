@@ -10,7 +10,6 @@ For manual testing run:
 python pigeon_sort.py
 """
 
-from __future__ import annotations
 
 
 def pigeon_sort(array: list[int]) -> list[int]:

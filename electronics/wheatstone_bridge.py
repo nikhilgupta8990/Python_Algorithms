@@ -1,5 +1,4 @@
 # https://en.wikipedia.org/wiki/Wheatstone_bridge
-from __future__ import annotations
 
 
 def wheatstone_solver(

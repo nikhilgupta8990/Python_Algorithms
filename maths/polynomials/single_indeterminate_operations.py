@@ -7,7 +7,6 @@ Reference: https://en.wikipedia.org/wiki/Polynomial
 
 """
 
-from __future__ import annotations
 
 from collections.abc import MutableSequence
 

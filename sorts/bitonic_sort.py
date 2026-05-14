@@ -4,7 +4,6 @@ Python program for Bitonic Sort.
 Note that this program works only when size of input is a power of 2.
 """
 
-from __future__ import annotations
 
 
 def comp_and_swap(array: list[int], index1: int, index2: int, direction: int) -> None:

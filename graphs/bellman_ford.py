@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 
 def print_distance(distance: list[float], src):

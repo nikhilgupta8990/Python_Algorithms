@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 
 def double_linear_search(array: list[int], search_item: int) -> int:

@@ -1,5 +1,4 @@
 # https://www.geeksforgeeks.org/newton-forward-backward-interpolation/
-from __future__ import annotations
 
 import math
 

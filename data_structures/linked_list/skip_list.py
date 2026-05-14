@@ -3,14 +3,9 @@ Based on "Skip Lists: A Probabilistic Alternative to Balanced Trees" by William 
 https://epaperpress.com/sortsearch/download/skiplist.pdf
 """
 
-from __future__ import annotations
 
 from itertools import pairwise
 from random import random
-from typing import TypeVar
-
-KT = TypeVar("KT")
-VT = TypeVar("VT")
 
 
 class Node[KT, VT]:

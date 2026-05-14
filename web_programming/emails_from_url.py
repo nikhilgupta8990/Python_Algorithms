@@ -7,7 +7,6 @@
 # ]
 # ///
 
-from __future__ import annotations
 
 __author__ = "Muhammad Umer Farooq"
 __license__ = "MIT"

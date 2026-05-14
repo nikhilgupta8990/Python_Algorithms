@@ -2,7 +2,6 @@
 Implementation of double ended queue.
 """
 
-from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass

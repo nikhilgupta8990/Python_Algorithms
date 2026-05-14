@@ -6,7 +6,6 @@ Time complexity: O(n! * n),
 where n denotes the length of the given sequence.
 """
 
-from __future__ import annotations
 
 
 def generate_all_permutations(sequence: list[int | str]) -> None:

@@ -1,25 +1,18 @@
-from __future__ import annotations
 
 from abc import abstractmethod
 from collections.abc import Iterable
-from typing import Protocol, TypeVar
+from typing import Protocol
 
 
 class Comparable(Protocol):
     @abstractmethod
-    def __lt__(self: T, other: T) -> bool:
-        pass
+    def __lt__[T](self: T, other: T) -> bool: ...
 
     @abstractmethod
-    def __gt__(self: T, other: T) -> bool:
-        pass
+    def __gt__[T](self: T, other: T) -> bool: ...
 
     @abstractmethod
-    def __eq__(self: T, other: object) -> bool:
-        pass
-
-
-T = TypeVar("T", bound=Comparable)
+    def __eq__(self, other: object) -> bool: ...
 
 
 class Heap[T: Comparable]:
